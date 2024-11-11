@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self Introduction</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #ffe6f2;
+      font-family: 'Arial', sans-serif;
+      color: #5c5c5c;
+    }
+    .intro-section {
+      margin-top: 50px;
+      text-align: center;
+    }
+    .intro-card {
+      margin-top: 20px;
+      padding: 30px;
+      border-radius: 15px;
+      background-color: #ffccdd;
+      color: #4d4d4d;
+      box-shadow: 0 6px 10px rgba(255, 128, 170, 0.3);
+    }
+    .btn-custom {
+      background-color: #ff99bb;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    .btn-custom:hover {
+      background-color: #ff80aa;
+    }
+    .footer {
+      margin-top: 40px;
+      padding: 15px;
+      background-color: #ffcce6;
+      color: #5c5c5c;
+      text-align: center;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="intro-section">
+      <h1 class="display-4" style="color: #ff6699;">Hello, I'm Excited to Introduce Myself!</h1>
+      <p class="lead">2023664025</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card intro-card">
+          <div class="card-body">
+            <h2 id="name"></h2>
+            <p id="bio" style="font-size: 1.2rem;"></p>
+            <hr>
+            <p><strong>Favorite Hobby:</strong> <span id="hobby"></span></p>
+            <p><strong>Contact:</strong> <span id="contact"></span></p>
+            <button class="btn btn-custom" onclick="showMore()">Learn More About Me</button>
+            <p id="moreInfo" style="display:none; margin-top: 15px; font-style: italic;"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p>제 소개를 봐주셔서 감사합니다!! 이외에 궁금하신점이 있다면 메일로 연락주세요!</p>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Custom JavaScript to populate content -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const name = "박세현";
+      const bio = "저는 부산에서 태어나 현재 경성대학교 소프트웨어학과 2학년으로 재학중입니다.";
+      const hobby = "좋아하는 취미 활동으로는 운동, 요리, 책읽기, 산책 등이 있습니다.";
+      const contact = "qkrtpgus73@naver.com";
+      const moreInfo = "앞으로 일본어나 영어 회화 실력을 쌓아 직접 해외에 나가 그 나라 사람들과 직접 대화를 나눠보고 싶습니다. 그리고 한국에서도 다양한 곳들을 놀러다니고 싶습니다.";
+
+      document.getElementById("name").textContent = name;
+      document.getElementById("bio").textContent = bio;
+      document.getElementById("hobby").textContent = hobby;
+      document.getElementById("contact").textContent = contact;
+
+      window.showMore = function() {
+        const moreInfoElement = document.getElementById("moreInfo");
+        moreInfoElement.textContent = moreInfo;
+        moreInfoElement.style.display = "block";
+      };
+    });
+  </script>
+</body>
+</html>

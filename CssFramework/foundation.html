@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <!-- Foundation CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css">
+  <style>
+    body {
+      background-color: #f3e5f5;
+    }
+    .sidebar {
+      background-color: #d1c4e9;
+      color: #4a148c;
+    }
+    .section-header {
+      background-color: #b39ddb;
+      color: #4a148c;
+      padding: 2rem;
+      text-align: center;
+    }
+    .content-card {
+      background-color: #e1bee7;
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="section-header">
+    <h1 class="title">Welcome to My World</h1>
+    <p>저를 소개합니다~~</p>
+  </header>
+
+  <!-- Main Layout with Sidebar -->
+  <div class="grid-container fluid">
+    <div class="grid-x grid-margin-x">
+      
+      <!-- Sidebar Section -->
+      <aside class="cell small-12 medium-4 large-3 sidebar">
+        <div class="text-center">
+          <h2>Hello, I'm 박세현</h2>
+          <p>2023664025</p>
+          <img src="me.jpeg" alt="Profile Picture" class="thumbnail" style="border-radius: 50%; margin-top: 1rem;">
+          <button class="button hollow primary" onclick="toggleMoreInfo()">More About Me</button>
+          <div id="moreInfo" class="hidden" style="margin-top: 1rem;">
+            <p>저는 밝고 긍정적인 성격을 가졌으며 항상 용기있게 도전하는 사람입니다. 앞으로도 이런 긍정적인 모습을 잃지 않고 타인에게 본받을점이 있는, 선한 영향을 끼치는 사람이 되고 싶습니다.</p>
+          </div>
+        </div>
+      </aside>
+      
+      <!-- Main Content Section -->
+      <div class="cell small-12 medium-8 large-9">
+        
+        <!-- About Section -->
+        <section class="content-card">
+          <h3>About Me</h3>
+          <p>저는 현재 경성대학교 소프트웨어학과 2학년이며 CS랩실에 소속되어 있습니다. 그리고 소프트웨어학과 제 7대 학생회 정책부장으로 활동하고 있습니다.</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="content-card">
+          <h3>배우는것</h3>
+          <div class="grid-x grid-margin-x">
+            <div class="cell small-12 medium-6">
+              <p><strong>전공 : </strong>운영체제, 자바프로그래밍응용, 웹프로그래밍, 알고리즘</p>
+              <p><strong>선택교양 : </strong>일상속의 성인지, 장애아동의이해</p>
+            </div>
+            <div class="cell small-12 medium-6">
+              <p><strong>배우고 싶은 것 : </strong>일본어/영어 회화</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="content-card">
+          <h3>좋아하는 것들</h3>
+          <p>저는 세상에 재미있는게 많다고 생각해서 좋아하는 것도 정말 많습니다. 그중에서 일부만 알려드리겠습니다.</p>
+          <ul>
+            <li><strong>동물 : </strong>동물들을 좋아하며 고양이나 강아지 이외에도 햄스터나 해달, 수달 등등 털달린 동물들을 좋아합니다.</li>
+            <li><strong>음식 : </strong>한식이나 분식 이외에도 과자나 초콜릿 같은 군것질을 좋아합니다.</li>
+          </ul>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section class="content-card">
+          <h3>Contact Me</h3>
+          <p>필요할때 연락주세요!</p>
+          <p><strong>Email :</strong> qkrtpgus73@naver.com</p>
+        </section>
+
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="section-header">
+    <p>Thank you for visiting my page. Looking forward to connecting with you!</p>
+  </footer>
+
+  <!-- Custom JavaScript for "More About Me" Section -->
+  <script>
+    function toggleMoreInfo() {
+      const moreInfo = document.getElementById("moreInfo");
+      moreInfo.classList.toggle("hidden");
+    }
+  </script>
+</body>
+</html>

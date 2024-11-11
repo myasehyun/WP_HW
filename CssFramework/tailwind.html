@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-yellow-50 font-sans">
+
+  <!-- Header Section -->
+  <header class="bg-yellow-300 text-yellow-900 py-8">
+    <div class="container mx-auto text-center">
+      <h1 class="text-5xl font-bold">Meet Me</h1>
+      <p class="mt-2 text-xl">저를 소개합니다ㅎㅎ</p>
+    </div>
+  </header>
+
+  <!-- Profile Section -->
+  <section class="container mx-auto px-4 py-12">
+    <div class="flex flex-col md:flex-row items-center bg-yellow-200 p-8 rounded-lg shadow-lg">
+      <!-- Image Section -->
+      <div class="w-full md:w-1/3 mb-6 md:mb-0">
+        <img src="me.jpeg"Profile Picture class="rounded-full mx-auto shadow-md">
+      </div>
+      <!-- Info Section -->
+      <div class="w-full md:w-2/3 text-center md:text-left md:ml-6">
+        <h2 id="name" class="text-3xl font-semibold text-yellow-800 mb-2"></h2>
+        <p id="bio" class="text-lg text-yellow-700"></p>
+        <p class="mt-4 text-md"><strong>Hobbies:</strong> <span id="hobby" class="text-yellow-800"></span></p>
+        <p class="text-md"><strong>Contact:</strong> <span id="contact" class="text-yellow-800"></span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- More Info Section -->
+  <section class="container mx-auto px-4 py-6">
+    <div class="bg-yellow-100 p-6 rounded-lg shadow">
+      <button class="bg-yellow-400 hover:bg-yellow-300 text-white font-semibold py-2 px-4 rounded" onclick="toggleMoreInfo()">More About Me</button>
+      <div id="moreInfo" class="hidden mt-4 text-yellow-700 text-md italic">
+        <!-- This will display more details about the person when clicked -->
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-yellow-300 py-6 text-center text-yellow-900">
+    <p>Thank you for visiting my page! Feel free to reach out anytime.</p>
+  </footer>
+
+  <!-- Custom JavaScript to populate content and show/hide more information -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const name = "박세현";
+      const bio = "저는 현재 경성대학교 소프트웨어학과 2학년이며 CS랩실에 소속되어 있습니다. 그리고 소프트웨어학과 제 7대 학생회 정책부장으로 활동하고 있습니다.";
+      const hobby = "운동하기, 요리하기, 책읽기";
+      const contact = "qkrtpgus73@naver.com";
+      const moreInfo = "는 밝고 긍정적인 성격을 가졌으며 항상 용기있게 도전하는 사람입니다. 앞으로도 이런 긍정적인 모습을 잃지 않고 타인에게 본받을점이 있는, 선한 영향을 끼치는 사람이 되고 싶습니다.";
+
+      document.getElementById("name").textContent = name;
+      document.getElementById("bio").textContent = bio;
+      document.getElementById("hobby").textContent = hobby;
+      document.getElementById("contact").textContent = contact;
+
+      window.toggleMoreInfo = function() {
+        const moreInfoElement = document.getElementById("moreInfo");
+        moreInfoElement.textContent = moreInfo;
+        moreInfoElement.classList.toggle("hidden");
+      };
+    });
+  </script>
+</body>
+</html>

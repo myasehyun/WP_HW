@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <!-- Bulma CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #e0f7fa;
+    }
+    .sidebar {
+      background-color: #81d4fa;
+    }
+    .content-card, .skills-card, .projects-card {
+      background-color: #b3e5fc;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="has-background-link-light py-5">
+    <div class="container has-text-centered">
+      <h1 class="title is-2 has-text-link">Welcome to My Page</h1>
+      <p class="subtitle is-5">나를 소개합니다~!</p>
+    </div>
+  </header>
+
+  <div class="container is-fluid mt-5">
+    <div class="columns is-gapless">
+      
+      <!-- Sidebar Section -->
+      <aside class="column is-3 sidebar has-text-centered py-6">
+        <h2 class="title is-3 has-text-info">Hi, I'm 박세현</h2>
+        <p class="subtitle is-6">2023664025</p>
+        <figure class="image is-128x128 mx-auto my-4">
+          <img class="is-rounded" src="me.jpeg" alt="Profile Picture">
+        </figure>
+        <button class="button is-link is-light mt-3" onclick="showMoreInfo()">More About Me</button>
+        <div id="moreInfo" class="is-hidden mt-4 has-text-info-dark"></div>
+      </aside>
+      
+      <!-- Main Content Section -->
+      <div class="column is-9">
+
+        <!-- Bio Section -->
+        <section class="box content-card p-6 mb-5">
+          <h3 class="title is-4">About Me</h3>
+          <p id="bio" class="content">저는 현재 경성대학교 소프트웨어학과 2학년이며 CS랩실에 소속되어 있습니다. 그리고 소프트웨어학과 제 7대 학생회 정책부장으로 활동하고 있습니다.</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="box skills-card p-6 mb-5">
+          <h3 class="title is-4">배우는것</h3>
+          <div class="columns is-multiline">
+            <div class="column is-half">
+              <p><strong>전공 : </strong>운영체제, 자바프로그래밍응용, 웹프로그래밍, 알고리즘</p>
+            </div>
+            <div class="column is-half">
+              <p><strong>선택교양 : </strong>일상속의 성인지, 장애아동의이해</p>
+            </div>
+            <div class="column is-half">
+              <p><strong>학교활동 : </strong>CS랩실, 학생회</p>
+            </div>
+            <div class="column is-half">
+              <p><strong>배우고 싶은 것 : </strong>일본어/영어 회화</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="box projects-card p-6 mb-5">
+          <h3 class="title is-4">좋아하는 것들</h3>
+          <ul>
+            <li><strong>동물 : </strong>동물들을 좋아하며 고양이나 강아지 이외에도 햄스터나 해달, 수달 등등 털달린 동물들을 좋아합니다.</li>
+            <li><strong>음식 : </strong>한식이나 분식 이외에도 과자나 초콜릿 같은 군것질을 좋아합니다.</li>
+          </ul>
+        </section>
+
+      </div>
+      
+    </div>
+  </div>
+
+  <footer class="footer has-background-link-light py-5">
+    <div class="content has-text-centered">
+      <p>Thank you for visiting my page! I look forward to connecting with you.</p>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript for "More About Me" Section -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const moreInfo = "저는 밝고 긍정적인 성격을 가졌으며 항상 용기있게 도전하는 사람입니다. 앞으로도 이런 긍정적인 모습을 잃지 않고 타인에게 본받을점이 있는, 선한 영향을 끼치는 사람이 되고 싶습니다.";
+
+      window.showMoreInfo = function() {
+        const moreInfoElement = document.getElementById("moreInfo");
+        moreInfoElement.textContent = moreInfo;
+        moreInfoElement.classList.toggle("is-hidden");
+      };
+    });
+  </script>
+</body>
+</html>
