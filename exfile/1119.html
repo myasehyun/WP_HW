@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14개와 22개의 HTML 예제 연결</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">HTML 예제 모음</h1>
+        <ul class="nav nav-tabs" id="exampleTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="tab-14" data-bs-toggle="tab" data-bs-target="#content-14" type="button" role="tab" aria-controls="content-14" aria-selected="true">
+                    14개의 예제
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-22" data-bs-toggle="tab" data-bs-target="#content-22" type="button" role="tab" aria-controls="content-22" aria-selected="false">
+                    22개의 예제
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content mt-3" id="exampleTabsContent">
+            <!-- 14개의 예제 -->
+            <div class="tab-pane fade show active" id="content-14" role="tabpanel" aria-labelledby="tab-14">
+                <div class="row">
+                    <div class="col-md-4">
+                        <ul class="list-group">
+                            <li class="list-group-item active">14개의 예제 목록</li>
+                            <script>
+                                for (let i = 1; i <= 14; i++) {
+                                    document.write(`<li class="list-group-item"><a href="${i}.html" target="contentFrame14">예제 ${i}</a></li>`);
+                                }
+                            </script>
+                        </ul>
+                    </div>
+                    <div class="col-md-8">
+                        <iframe id="contentFrame14" src="1.html" class="border" style="width: 100%; height: 500px;"></iframe>
+                    </div>
+                </div>
+            </div>
+            <!-- 22개의 예제 -->
+            <div class="tab-pane fade" id="content-22" role="tabpanel" aria-labelledby="tab-22">
+                <div class="row">
+                    <div class="col-md-4">
+                        <ul class="list-group">
+                            <li class="list-group-item active">22개의 예제 목록</li>
+                            <script>
+                                for (let i = 15; i <= 36; i++) {
+                                    document.write(`<li class="list-group-item"><a href="${i}.html" target="contentFrame22">예제 ${i - 14}</a></li>`);
+                                }
+                            </script>
+                        </ul>
+                    </div>
+                    <div class="col-md-8">
+                        <iframe id="contentFrame22" src="15.html" class="border" style="width: 100%; height: 500px;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
