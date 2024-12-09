@@ -135,7 +135,12 @@
              <tr>
             <td>Hivelab</td>
             <td>2024-12-10</td>
-            <td>가고싶은 회사를 소개하는 웹페이지</td>
+            <td>가고싶은 회사를 소개하는 웹페이지</td> 
+        </tr>
+                     <tr>
+            <td>Hivelab_PPT</td>
+            <td>2024-12-10</td>
+            <td>회사소개 PPT 자료</td> 
         </tr>
     </table>
 </div>
